@@ -1,11 +1,11 @@
 /* style.css */
 
-/* Body général */
+/* Style global */
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     text-align: center;
-    padding: 50px;
+    padding: 20px;
     margin: 0;
 }
 
@@ -17,6 +17,7 @@ nav {
 
 nav h2 {
     color: white;
+    margin: 0;
 }
 
 nav ul {
@@ -25,37 +26,64 @@ nav ul {
     justify-content: center;
     gap: 15px;
     padding: 0;
+    margin: 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* Contenu principal */
+/* Main content */
+main {
+    padding: 20px;
+}
+
 h1 {
     color: #333;
+}
+
+/* Section Contact */
+#contact {
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+#contact h2 {
+    color: #333;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact input,
+#contact textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* Footer */
 footer {
     background-color: #333;
     color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 50px;
-}
-
-footer ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-    margin: 10px 0 0 0;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
+    padding: 10px;
+    margin-top: 20px;
 }
