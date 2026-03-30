@@ -9,14 +9,14 @@
 
 <body>
 
-    <!-- Navbar en haut -->
+    <!-- Navbar -->
     <header>
         <nav>
             <h2>Mon Site</h2>
             <ul>
                 <li><a href="#">Accueil</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -27,7 +27,33 @@
         <p>Ceci est ma première page web.</p>
     </main>
 
-    <!-- JS toujours à la fin -->
+    <!-- Section Services -->
+    <section id="services">
+        <h2>Nos Services</h2>
+        <ul>
+            <li>Développement Web</li>
+            <li>Design graphique</li>
+            <li>Marketing digital</li>
+        </ul>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+        <h2>Contactez-nous</h2>
+        <form>
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <textarea placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Mini Site - Tous droits réservés</p>
+    </footer>
+
+    <!-- JS -->
     <script src="../js/script.js"></script>
 
 </body>
