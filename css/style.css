@@ -1,11 +1,12 @@
 /* style.css */
 
-/* Style global du body */
+/* Body général */
 body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
     text-align: center;
     padding: 50px;
+    margin: 0;
 }
 
 /* Navbar */
@@ -34,4 +35,27 @@ nav a {
 /* Contenu principal */
 h1 {
     color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
 }
