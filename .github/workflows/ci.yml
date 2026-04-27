@@ -2,40 +2,33 @@ name: CI Pipeline
 
 on:
   push:
-feature-cicd
     branches: [develop, main]
   pull_request:
     branches: [develop, main]
 
 jobs:
-  build-and-test:
-
-    branches: [main, develop]
-  pull_request:
-
-jobs:
-  build:
-  main
+  test:
+    name: Test HTML
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
-feature-cicd
         uses: actions/checkout@v3
 
-      - name: Setup Node.js  # adapte selon ton projet
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+      - name: Verifier index.html existe
+        run: |
+          if [ ! -f html/index.html ]; then
+            echo "ERREUR: html/index.html manquant!"
+            exit 1
+          fi
+          echo "index.html trouve ✅"
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run tests
-        run: npm test
-
-        uses: actions/checkout@v4
+  build:
+    name: Build Docker
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Build Docker image
-        run: docker build -t mini-site .
-        main
+        run: docker build -t mini-site:latest .
