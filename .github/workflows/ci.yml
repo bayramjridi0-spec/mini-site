@@ -1,0 +1,41 @@
+name: CI Pipeline
+
+on:
+  push:
+feature-cicd
+    branches: [develop, main]
+  pull_request:
+    branches: [develop, main]
+
+jobs:
+  build-and-test:
+
+    branches: [main, develop]
+  pull_request:
+
+jobs:
+  build:
+  main
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+feature-cicd
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js  # adapte selon ton projet
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t mini-site .
+        main
