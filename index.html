@@ -4,36 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Site</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Navbar en haut -->
-    <header>
-        <nav>
-            <h2>Mon Site</h2>
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <h2>Mon Site</h2>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Contenu principal -->
-    <main>
-        <h1>Bienvenue sur mon Mini Site !</h1>
-        <p>Ceci est ma première page web.</p>
-    </main>
+<main>
+    <h1 id="titre">Bienvenue sur mon Mini Site !</h1>
+    <p>Ceci est ma première page web.</p>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Mon Site. Tous droits réservés.</p>
-    </footer>
+    <h2>Contact</h2>
 
-    <!-- JS toujours à la fin -->
-    <script src="../js/script.js"></script>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Votre nom" required>
+        <br><br>
+
+        <input type="email" id="email" placeholder="Votre email" required>
+        <br><br>
+
+        <textarea id="message" placeholder="Votre message" required></textarea>
+        <br><br>
+
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <p id="result"></p>
+</main>
+
+<footer>
+    <p>&copy; 2026 Mon Site. Tous droits réservés.</p>
+</footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
